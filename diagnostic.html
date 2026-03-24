@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔧 Diagnostic Tool - RoofFix Experts</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .diagnostic-box {
+      border: 3px solid #3b82f6;
+      background: #eff6ff;
+      padding: 30px;
+      margin: 20px 0;
+      border-radius: 12px;
+    }
+    .success {
+      border-color: #10b981;
+      background: #d1fae5;
+    }
+    .error {
+      border-color: #ef4444;
+      background: #fee2e2;
+    }
+    .test-header {
+      background: #1a1a1a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .test-hero {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+      color: white;
+      padding: 40px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .test-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    h1, h2 {
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+    .checklist {
+      list-style: none;
+      padding: 0;
+    }
+    .checklist li {
+      padding: 10px;
+      margin: 5px 0;
+      background: white;
+      border-left: 4px solid #3b82f6;
+      border-radius: 4px;
+    }
+    code {
+      background: #f3f4f6;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #3b82f6;
+      color: white;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 10px 5px;
+    }
+    .btn:hover {
+      background: #2563eb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="diagnostic-box success">
+    <h1>🔧 RoofFix Experts - Diagnostic Tool</h1>
+    <p><strong>This page will help you verify that your website is working correctly.</strong></p>
+  </div>
+
+  <div class="test-header">
+    <h2>✅ Test 1: Header Styling</h2>
+    <p>If you can see this with a dark background and white text, the header CSS is working!</p>
+  </div>
+
+  <div class="test-hero">
+    <h2>✅ Test 2: Hero Section</h2>
+    <p>If you can see this with a blue gradient background and white text, the hero CSS is working!</p>
+  </div>
+
+  <div class="test-card">
+    <h2>✅ Test 3: Card Styling</h2>
+    <p>If this box has a white background with shadow, the card CSS is working!</p>
+  </div>
+
+  <div class="diagnostic-box">
+    <h2>📋 Checklist - What Should Be Working:</h2>
+    <ul class="checklist">
+      <li>✅ <strong>Header:</strong> Dark background (#1a1a1a) with white text</li>
+      <li>✅ <strong>Logo:</strong> "RoofFix Experts" should be blue (#3b82f6)</li>
+      <li>✅ <strong>Hero:</strong> Blue gradient background</li>
+      <li>✅ <strong>Cards:</strong> White background with subtle shadow</li>
+      <li>✅ <strong>Buttons:</strong> Blue background with hover effect</li>
+      <li>✅ <strong>Text:</strong> Dark gray for content, white on dark sections</li>
+    </ul>
+  </div>
+
+  <div class="diagnostic-box">
+    <h2>📂 File Structure Check:</h2>
+    <p>Your files should be organized like this:</p>
+    <pre style="background: #f3f4f6; padding: 20px; border-radius: 8px; overflow-x: auto;">
+public/
+├── index.html          ← Main page
+├── services.html       ← Services listing
+├── blog.html          ← Blog listing  
+├── faq.html           ← FAQ page
+├── terms.html         ← Terms & Conditions
+├── test.html          ← Simple CSS test
+├── diagnostic.html    ← This diagnostic page
+├── styles/
+│   └── main.css       ← ⚠️ MUST BE HERE!
+└── js/
+    └── main.js        ← ⚠️ MUST BE HERE!
+    </pre>
+  </div>
+
+  <div class="diagnostic-box">
+    <h2>🔍 How to Debug:</h2>
+    <ol style="line-height: 2;">
+      <li><strong>Open Browser DevTools:</strong>
+        <ul>
+          <li>Right-click anywhere → "Inspect" or "Inspect Element"</li>
+          <li>Or press F12 (Windows) / Cmd+Option+I (Mac)</li>
+        </ul>
+      </li>
+      <li><strong>Check Console Tab:</strong>
+        <ul>
+          <li>Look for red errors</li>
+          <li>If you see "Failed to load resource" for <code>main.css</code>, the CSS path is wrong</li>
+        </ul>
+      </li>
+      <li><strong>Check Network Tab:</strong>
+        <ul>
+          <li>Refresh the page (F5)</li>
+          <li>Find <code>main.css</code> in the list</li>
+          <li>Status should be <strong>200</strong> (green) = Success</li>
+          <li>Status <strong>404</strong> (red) = File not found - check file structure!</li>
+        </ul>
+      </li>
+      <li><strong>Check Elements Tab:</strong>
+        <ul>
+          <li>Click on any element (like the header)</li>
+          <li>Look at "Styles" panel on the right</li>
+          <li>You should see CSS rules from <code>main.css</code></li>
+          <li>If you only see "user agent stylesheet", CSS isn't loading</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <div class="diagnostic-box error">
+    <h2>⚠️ Common Issues & Solutions:</h2>
+    
+    <h3>Issue 1: CSS Not Loading</h3>
+    <p><strong>Symptoms:</strong> No colors, everything is black text on white background</p>
+    <p><strong>Solution:</strong></p>
+    <ul>
+      <li>Verify <code>styles/main.css</code> exists in the same folder as your HTML</li>
+      <li>Check HTML has: <code>&lt;link rel="stylesheet" href="styles/main.css"&gt;</code></li>
+      <li>NOT: <code>href="/styles/main.css"</code> (no leading slash)</li>
+    </ul>
+
+    <h3>Issue 2: Opening from File Explorer</h3>
+    <p><strong>Symptoms:</strong> Works on some pages but not others</p>
+    <p><strong>Solution:</strong> Always open <code>index.html</code> first, then use navigation links</p>
+
+    <h3>Issue 3: Browser Cache</h3>
+    <p><strong>Symptoms:</strong> Fixes don't seem to apply</p>
+    <p><strong>Solution:</strong> Hard refresh:</p>
+    <ul>
+      <li>Windows: <code>Ctrl + Shift + R</code> or <code>Ctrl + F5</code></li>
+      <li>Mac: <code>Cmd + Shift + R</code></li>
+    </ul>
+
+    <h3>Issue 4: Wrong File Structure</h3>
+    <p><strong>Symptoms:</strong> 404 errors in console</p>
+    <p><strong>Solution:</strong> Move files to correct locations as shown in "File Structure Check" above</p>
+  </div>
+
+  <div class="diagnostic-box success">
+    <h2>✅ Next Steps:</h2>
+    <div style="margin: 20px 0;">
+      <a href="test.html" class="btn">Simple CSS Test</a>
+      <a href="index.html" class="btn">View Full Homepage</a>
+      <a href="services.html" class="btn">View Services Page</a>
+    </div>
+  </div>
+
+  <div class="diagnostic-box">
+    <h2>📞 What Each Page Should Look Like:</h2>
+    
+    <h3>index.html (Homepage)</h3>
+    <ul class="checklist">
+      <li>Dark header with navigation</li>
+      <li>Blue hero section with "Professional Roof Repair & Replacement Services"</li>
+      <li>Light gray certifications section with NRCA badge</li>
+      <li>White services section with checkboxes</li>
+      <li>Feature cards with icons</li>
+      <li>Contact form with ProSafe branding</li>
+      <li>Blog preview with 3 article cards</li>
+      <li>FAQ accordion (expandable)</li>
+      <li>Dark footer with links</li>
+    </ul>
+
+    <h3>services.html</h3>
+    <ul class="checklist">
+      <li>Same header and footer</li>
+      <li>Page hero with title</li>
+      <li>6 service cards in a grid</li>
+      <li>Each card links to detail page</li>
+    </ul>
+
+    <h3>blog.html</h3>
+    <ul class="checklist">
+      <li>Same header and footer</li>
+      <li>Page hero</li>
+      <li>6 blog article cards with images</li>
+      <li>Each card shows title, excerpt, author, date</li>
+    </ul>
+
+    <h3>faq.html</h3>
+    <ul class="checklist">
+      <li>Same header and footer</li>
+      <li>Page hero</li>
+      <li>Accordion with expandable questions</li>
+      <li>Click to expand/collapse</li>
+    </ul>
+  </div>
+
+  <div class="diagnostic-box">
+    <h2>🚀 Generate All Pages:</h2>
+    <p>Once the main pages are working, run this command to create all service and blog detail pages:</p>
+    <pre style="background: #1a1a1a; color: #fff; padding: 20px; border-radius: 8px;">node generate-pages.js</pre>
+    <p>This will create:</p>
+    <ul>
+      <li>6 service detail pages in <code>services/</code> folder</li>
+      <li>6 blog article pages in <code>blog/</code> folder</li>
+    </ul>
+  </div>
+
+  <div class="diagnostic-box success">
+    <h2>💡 Pro Tips:</h2>
+    <ul class="checklist">
+      <li><strong>Use a local server:</strong> Instead of opening files directly, run: <code>python -m http.server 8000</code> in the public/ folder, then visit <code>http://localhost:8000</code></li>
+      <li><strong>Try different browsers:</strong> If one doesn't work, try Chrome, Firefox, or Edge</li>
+      <li><strong>Check permissions:</strong> Make sure you have read permission on all files</li>
+      <li><strong>Disable extensions:</strong> Some browser extensions can interfere with local files</li>
+    </ul>
+  </div>
+
+  <script>
+    // JavaScript Test
+    console.log('✅ JavaScript is loading!');
+    
+    // Check if CSS is loaded
+    setTimeout(() => {
+      const header = document.querySelector('.test-header');
+      if (header) {
+        const bgColor = window.getComputedStyle(header).backgroundColor;
+        if (bgColor === 'rgb(26, 26, 26)' || bgColor === '#1a1a1a') {
+          console.log('✅ CSS is loaded correctly!');
+        } else {
+          console.error('⚠️ CSS might not be loading. Header background is:', bgColor);
+        }
+      }
+    }, 100);
+
+    // Display results
+    window.addEventListener('load', () => {
+      const results = document.createElement('div');
+      results.className = 'diagnostic-box success';
+      results.innerHTML = `
+        <h2>✅ Page Load Complete!</h2>
+        <p><strong>Window Width:</strong> ${window.innerWidth}px</p>
+        <p><strong>Device:</strong> ${window.innerWidth < 768 ? 'Mobile' : 'Desktop'}</p>
+        <p><strong>Browser:</strong> ${navigator.userAgent.split(' ').pop()}</p>
+      `;
+      document.body.appendChild(results);
+    });
+  </script>
+
+</body>
+</html>

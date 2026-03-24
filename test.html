@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Test - RoofFix Experts</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    /* Test styles to verify CSS is loading */
+    .test-box {
+      background: #3b82f6;
+      color: white;
+      padding: 20px;
+      margin: 20px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .error-box {
+      background: #ef4444;
+      color: white;
+      padding: 20px;
+      margin: 20px;
+      text-align: center;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="test-box">
+    <h1>✅ CSS IS LOADING!</h1>
+    <p>If you can see this blue box with white text, your CSS is working!</p>
+  </div>
+
+  <!-- Test Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">RoofFix Experts</a>
+      </div>
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Test Hero -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1 class="hero-title">Test Hero Section</h1>
+      <p class="hero-subtitle">If you can see this with blue background, everything works!</p>
+    </div>
+  </section>
+
+  <div class="test-box">
+    <h2>Checklist:</h2>
+    <p>✅ Can you see the dark header above?</p>
+    <p>✅ Is "RoofFix Experts" in blue?</p>
+    <p>✅ Is the Hero section blue?</p>
+    <p>✅ Can you read white text on blue?</p>
+  </div>
+
+  <div style="padding: 40px; max-width: 800px; margin: 0 auto;">
+    <h2>If you CAN'T see styling:</h2>
+    <ol style="line-height: 2;">
+      <li><strong>Check file structure:</strong> Make sure <code>styles/main.css</code> exists in the same folder as this HTML</li>
+      <li><strong>Open DevTools:</strong> Right-click → Inspect → Console tab (check for errors)</li>
+      <li><strong>Check Network tab:</strong> Look for main.css - should show status 200</li>
+      <li><strong>Hard refresh:</strong> Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac)</li>
+      <li><strong>Try different browser:</strong> Chrome, Firefox, or Edge</li>
+    </ol>
+  </div>
+
+</body>
+</html>
